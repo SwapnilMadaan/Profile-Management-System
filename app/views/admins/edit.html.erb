@@ -1,0 +1,36 @@
+<h1>Edit User Info</h1>
+  <%= form_with(model: @user, local: true) do |form| %>
+    <p>
+      <%= form.label :Profile_ID %><br>
+      <%= form.text_field :user_id %>
+    </p>
+    <p>
+      <%= form.label :Name %><br>
+      <%= form.text_field :user_name %>
+    </p>
+    
+    <p>
+      <%= form.label :Email %><br>
+      <%= form.email_field :user_email %>
+    </p>
+    <p>
+      <%= form.label :Password %><br>
+      <%= form.password_field :password %>
+    </p>
+    <p>
+      <%= form.label :Phone_Number %><br>
+      <%= form.text_field :user_contact %>
+    </p>
+    <p>
+      <%= form.label :Parent_ID %><br>
+      <%= form.text_field :parent_id %>
+    </p>
+
+    <p>
+      <%= form.label :Profile_Type %><br>
+      <%= form.select :user_catagory, ['buyer','owner','broker'] %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>

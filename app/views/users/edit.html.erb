@@ -1,0 +1,16 @@
+<h1>Edit Profile</h1>
+<%= form_with(model: @user, local: true) do |f| %> 
+<%= f.label :username%><br>
+<%= f.text_field :user_name%><br>
+<%= f.label :password%><br>
+<%=f.password_field :password %><br>
+<%= f.label :contact%><br>
+<%= f.text_field :user_contact%><br>
+<%= f.label :email%><br>
+<%= f.email_field :user_email %><br>
+<%= f.select :user_catagory, ['user', 'owner','broker']%><br>
+<%= f.submit %>
+<%= button_to "Cancel", root_path, method: :get%>
+
+
+ <%end%>

@@ -1,0 +1,11 @@
+<h1>Profile Management System</h1>
+<% if logged_in %>
+<h2>You are Logged In, <%= current_user.user_name %></h2>
+<%= button_to "Edit Profile", edit_user_path(session[:id]), method: :get%>
+<%= button_to "Show Profile",show_path, method: :get%>
+<%= button_to "Logout", destroy_path, method: :get%>
+<%else%>
+<%= button_to "Admin Login",admin_login_path , method: :get%>
+<%= button_to "User Login", login_path, method: :get%>
+<%= button_to "User Sign Up", new_user_path, method: :get%>
+<%end%>

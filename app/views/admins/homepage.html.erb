@@ -1,0 +1,7 @@
+<h1>Profile Management System</h1> 
+<% if admin_logged_in %>
+<h2>Welcome Admin<%= find_admin.name %></h2>
+<%= button_to "Get User Profile", searchbar_path, method: :get%>
+<%= button_to "Get Report", get_report_path, method: :get%>%>"	
+<%= button_to "Signout", admin_logout_path, method: :get%>
+<%end%>

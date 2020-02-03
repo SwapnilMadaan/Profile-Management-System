@@ -1,0 +1,8 @@
+<h1>Search User Profiles </h1>
+<%= form_tag 'searchbar' do %>
+<%= label_tag :search_field%><br>
+<%= text_field_tag :field%><br>
+<%= label_tag :Query%><br>
+<%= text_field_tag :query %><br>
+<%= button_to "Search", searchbar_path, method: :post%>
+<% end %>

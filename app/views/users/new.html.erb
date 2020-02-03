@@ -1,0 +1,19 @@
+<h1>Sign Up</h1>
+<%= form_for @user do |f|%> 
+<%= f.label :username%><br>
+<%= f.text_field :user_name%><br>
+<%= f.label :password%><br>
+<%=f.password_field :password %><br>
+<%= f.label :contact%><br>
+<%= f.text_field :user_contact%><br>
+<%= f.label :email%><br>
+<%= f.email_field :user_email %><br>
+<%= f.label :Parent_ID%><br>
+<%= f.text_field :parent_id %><br>
+
+<%= f.select :user_catagory, ['user', 'owner','broker']%><br>
+<%= f.submit %>
+
+
+
+ <%end%>
